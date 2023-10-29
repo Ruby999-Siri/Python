@@ -1,0 +1,83 @@
+# Rasing an exception in Python:
+# raise Exception()
+# x = 10
+# if x > 5 :
+# raise Exception('x should not exced 5. the value of x was: {}'.format(x))
+  # raise Exception('x should not exced 5. the value of x was: {}'.format(x))
+# Exception: x should not exced 5. the value of x was: 10
+import sys
+
+
+# AssertionError  exception
+# instead of wating for a program to crash midway, you can also start by making an assertion in python whwn this happen then the program will halt.
+# import sys
+# assert('linux' in sys.platform),"This code runs on linux only."
+
+
+# try and exception handle
+# try and exception is used to catch and handle exceptions
+# try is for the code that is need to be to execute and the execpt for to execute thsic code when their is an exception
+
+
+
+# here assert will through the assertionexception
+
+# def linux_interaction():
+#     assert ('linux' in sys.platform), "Function can only run on linux systems."
+#     print("Doing Something")
+
+# Traceback (most recent call last):
+#   File "E:\AWS_project\subnetting.py", line 11, in <module>
+#     assert('linux' in sys.platform),"This code runs on linux only."
+#            ^^^^^^^^^^^^^^^^^^^^^^^
+# AssertionError: This code runs on linux only.
+
+# try:
+#     linux_interaction()
+# except:
+#     pass
+#
+# import sys
+# try:
+#     linux_interaction()
+# except AssertionError as error:
+#     print(error)
+#     print('The linux_interaction() function was not executed')
+
+
+
+# try:
+#     with open('file.log') as file:
+#         read_data = file.read()
+# except:
+#     print('could not open file.log')
+
+
+# we used to catch the execption by using the below code
+try:
+    with open('file.log') as file:
+        read_data = file.read()
+except FileNotFoundError as f_f:
+    print(f_f)
+
+#     if print('error') it will print the error as output
+# [Errno 2] No such file or directory: 'file.log' this meassage only send when that error is catch as object
+
+syntax:
+try :
+# run this code
+except FileNotFoundError():
+# Execute this code when there is an exception
+else:
+    # No exceptions? run this code
+# here also we CAN agian write a code for the exceptions
+finally:
+    # Always run this code
+
+
+# Raise allows you to throw an exception at any time.
+# assert enables yopu to verify if certain condition is met and throw an exception if isn't.
+# In the try clause, all statements are executed untill an exception is encounterd .
+# Execpt is used to catch and handle the execption(s) that are encountered in the try clause.
+# else lets you coed sections taht should run only when no exception  are encountered in tge try clause.
+# fnally enables you to execute sections of code tah tshuld always run, with or without any previously encountered exceptions.
